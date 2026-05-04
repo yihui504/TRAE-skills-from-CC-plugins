@@ -106,8 +106,8 @@ Sourced from the superpowers plugin, providing development workflow and collabor
 
 ## Credits
 
-- [superpowers](https://github.com/nicekid1/Superpowers) — Claude Code plugin
-- [oh-my-claudecode](https://github.com/anthropics/oh-my-claudecode) — Claude Code plugin
+- [superpowers](https://github.com/obra/superpowers) — Claude Code plugin
+- [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) — Claude Code plugin
 
 ## License
 
