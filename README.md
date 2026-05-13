@@ -21,6 +21,7 @@ This update includes deep TRAE SOLO mode adaptation and quality optimization for
 ```
 ├── ai-pipeline（一个使用Ralph保持运行的持续开发循环）/
 ├── frontend（前端及幻灯片）/
+├── GSD技能移植（66个GSD技能zip包，可直接导入TRAE）/
 ├── oh-my-claudecode技能移植/
 └── superpowers技能移植/
 ```
