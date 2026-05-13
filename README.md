@@ -6,6 +6,14 @@ A collection of skills adapted for TRAE_CN SOLO, sourced from well-known Claude 
 
 TRAE_CN is a free vibe coding application that provides powerful models for free and supports Rules & Skills. However, TRAE_CN does not provide users with general, powerful skills to fully leverage model capabilities and lower the usage barrier. Therefore, I selected the most useful skills from well-known Claude Code plugins (superpowers, oh-my-claudecode, get-shit-done), adapted them for TRAE_CN SOLO, and also assembled a custom AI pipeline skill set. You can download and import them yourself.
 
+This update includes deep TRAE SOLO mode adaptation and quality optimization for all 48 skills:
+- **Path adaptation**: Unified `.omc/`, `.claude/` paths to `.trae/`
+- **Tool adaptation**: Replaced Claude Code-specific tool references with TRAE SOLO-compatible alternatives
+- **Language unification**: All skill descriptions and core instructions are now in Chinese
+- **SOLO mode adaptation**: Each skill includes relationship notes with SOLO Coder's Plan/Spec modes
+- **Spec compliance**: Added "Not Applicable Scenarios", "Output Specification", and "Dependencies" sections
+- **Lossless functionality**: All core instructions, data structures, parameter thresholds, and code examples are fully preserved
+
 ---
 
 ## Directory Structure
@@ -13,6 +21,7 @@ TRAE_CN is a free vibe coding application that provides powerful models for free
 ```
 ├── ai-pipeline（一个使用Ralph保持运行的持续开发循环）/
 ├── frontend（前端及幻灯片）/
+├── GSD技能移植（66个GSD技能zip包，可直接导入TRAE）/
 ├── oh-my-claudecode技能移植/
 └── superpowers技能移植/
 ```
@@ -104,10 +113,46 @@ Sourced from the superpowers plugin, providing development workflow and collabor
 
 > **Note**: Each zip file contains a root-level `SKILL.md` file, conforming to the official TRAE skill format specification.
 
+## SOLO Mode Adaptation
+
+All skills have been deeply adapted for TRAE SOLO mode:
+
+### Relationship with SOLO Coder Built-in Features
+
+| SOLO Built-in Feature | Corresponding Skill | Relationship |
+|----------------------|---------------------|--------------|
+| Plan mode (/Plan) | omc-plan, ralplan, blueprint | These skills provide deeper consensus planning, usable as enhanced alternatives to Plan mode |
+| Spec mode (/Spec) | deep-interview | Provides stricter ambiguity-gated requirements collection, usable as a pre-enhancement to Spec mode |
+| Multi-task Management | ultrawork, dispatching-parallel-agents | Provides sub-agent parallel execution, works with SOLO's multi-task panel |
+| SOLO Coder Sub-agents | autopilot, ralph, sciomc | Requires configuring corresponding custom agents for SOLO Coder |
+
+### Auto-Run Security Recommendations
+
+Some skills run terminal commands during execution. We recommend in TRAE Settings > Conversation Flow > Auto-Run:
+- Enable "Auto-Run MCP"
+- Use whitelist mode for "Auto-Run Commands" with these safe command prefixes:
+  - `npm test`
+  - `npm run`
+  - `git `
+  - `python -m pytest`
+  - `npx `
+
 ## Credits
 
 - [superpowers](https://github.com/obra/superpowers) — Claude Code plugin
 - [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) — Claude Code plugin
+
+## Changelog
+
+### v2.0 - Deep SOLO Mode Adaptation
+
+- All 48 skills adapted for TRAE SOLO mode
+- Paths unified to `.trae/` directory
+- Language unified to Chinese (descriptions and core instructions)
+- Each skill includes SOLO mode adaptation notes
+- Each skill includes "Not Applicable Scenarios", "Output Specification", "Dependencies"
+- `using-superpowers` rewritten for TRAE SOLO
+- All core functionality verified as lossless
 
 ## License
 
