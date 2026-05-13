@@ -2,9 +2,9 @@
 
 [中文说明 / Chinese Documentation](./README_CN.md)
 
-A collection of skills adapted for TRAE_CN SOLO, sourced from well-known Claude Code plugins (**superpowers**, **oh-my-claudecode**) and custom-assembled pipelines.
+A collection of skills adapted for TRAE_CN SOLO, sourced from well-known Claude Code plugins (**superpowers**, **oh-my-claudecode**, **get-shit-done**) and custom-assembled pipelines.
 
-TRAE_CN is a free vibe coding application that provides powerful models for free and supports Rules & Skills. However, TRAE_CN does not provide users with general, powerful skills to fully leverage model capabilities and lower the usage barrier. Therefore, I selected the most useful skills from two well-known Claude Code plugins (superpowers, oh-my-claudecode), adapted them for TRAE_CN SOLO, and also assembled a custom AI pipeline skill set. You can download and import them yourself.
+TRAE_CN is a free vibe coding application that provides powerful models for free and supports Rules & Skills. However, TRAE_CN does not provide users with general, powerful skills to fully leverage model capabilities and lower the usage barrier. Therefore, I selected the most useful skills from well-known Claude Code plugins (superpowers, oh-my-claudecode, get-shit-done), adapted them for TRAE_CN SOLO, and also assembled a custom AI pipeline skill set. You can download and import them yourself.
 
 ---
 

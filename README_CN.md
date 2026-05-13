@@ -2,7 +2,7 @@
 
 [English Documentation](./README.md)
 
-TRAE_CN 是一款免费的 vibe coding 应用，其提供强大的模型供用户免费使用，且支持使用 Rules、Skills。但是 TRAE_CN 本身不为用户提供通用、强大的 skills 以充分发挥模型能力并进一步降低用户使用门槛，因此，我从 claude code 的两个知名插件（superpowers、oh-my-claudecode）所提供的 skill 中选择了我认为好用的那一些，针对 TRAE_CN SOLO 做了适配改造，此外还自行组装了一套 AI Pipeline 技能集，大家可以下载后自行导入使用。
+TRAE_CN 是一款免费的 vibe coding 应用，其提供强大的模型供用户免费使用，且支持使用 Rules、Skills。但是 TRAE_CN 本身不为用户提供通用、强大的 skills 以充分发挥模型能力并进一步降低用户使用门槛，因此，我从 Claude Code 的知名插件（superpowers、oh-my-claudecode、get-shit-done）所提供的 skill 中选择了我认为好用的那一些，针对 TRAE_CN SOLO 做了适配改造，此外还自行组装了一套 AI Pipeline 技能集，大家可以下载后自行导入使用。
 
 ---
 
