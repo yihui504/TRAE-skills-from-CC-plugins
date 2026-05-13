@@ -6,14 +6,6 @@ A collection of skills adapted for TRAE_CN SOLO, sourced from well-known Claude 
 
 TRAE_CN is a free vibe coding application that provides powerful models for free and supports Rules & Skills. However, TRAE_CN does not provide users with general, powerful skills to fully leverage model capabilities and lower the usage barrier. Therefore, I selected the most useful skills from well-known Claude Code plugins (superpowers, oh-my-claudecode, get-shit-done), adapted them for TRAE_CN SOLO, and also assembled a custom AI pipeline skill set. You can download and import them yourself.
 
-This update includes deep TRAE SOLO mode adaptation and quality optimization for all 48 skills:
-- **Path adaptation**: Unified `.omc/`, `.claude/` paths to `.trae/`
-- **Tool adaptation**: Replaced Claude Code-specific tool references with TRAE SOLO-compatible alternatives
-- **Language unification**: All skill descriptions and core instructions are now in Chinese
-- **SOLO mode adaptation**: Each skill includes relationship notes with SOLO Coder's Plan/Spec modes
-- **Spec compliance**: Added "Not Applicable Scenarios", "Output Specification", and "Dependencies" sections
-- **Lossless functionality**: All core instructions, data structures, parameter thresholds, and code examples are fully preserved
-
 ---
 
 ## Directory Structure
@@ -21,7 +13,7 @@ This update includes deep TRAE SOLO mode adaptation and quality optimization for
 ```
 ├── ai-pipeline（一个使用Ralph保持运行的持续开发循环）/
 ├── frontend（前端及幻灯片）/
-├── GSD技能移植（66个GSD技能zip包，可直接导入TRAE）/
+├── GSD技能移植/
 ├── oh-my-claudecode技能移植/
 └── superpowers技能移植/
 ```
@@ -102,6 +94,115 @@ Sourced from the superpowers plugin, providing development workflow and collabor
 | **using-git-worktrees** | Using git worktrees: creates isolated git worktrees for feature work that needs isolation from the current workspace |
 | **using-superpowers** | Using superpowers: establishes how to find and use skills at the start of any conversation |
 
+## GSD (Get-Shit-Done) Skills Port
+
+Sourced from the [get-shit-done](https://github.com/gsd-build/get-shit-done) plugin, providing a complete project management workflow from initialization to delivery. GSD implements a structured discuss → plan → execute → verify → ship cycle that complements SOLO Coder's Plan/Spec modes.
+
+### Core Workflow
+
+| Skill | Description |
+|-------|-------------|
+| **gsd-new-project** | Initialize new project with deep context collection: questioning → research → requirements → roadmap |
+| **gsd-discuss-phase** | Collect phase context through adaptive questioning before planning |
+| **gsd-plan-phase** | Create detailed phase plans (PLAN.md) with research and verification loops |
+| **gsd-execute-phase** | Execute all phase plans using wave-based parallelization |
+| **gsd-verify-work** | Verify built features through conversational UAT testing |
+| **gsd-ship** | Create PR, run reviews, and prepare for merge after verification passes |
+
+### Project Management
+
+| Skill | Description |
+|-------|-------------|
+| **gsd-autonomous** | Autonomously run all remaining milestone phases: discuss → plan → execute per phase |
+| **gsd-manager** | Unified project manager: status, routing, and coordination across all GSD operations |
+| **gsd-new-milestone** | Add a new milestone to an existing project |
+| **gsd-complete-milestone** | Complete and archive a milestone with audit |
+| **gsd-milestone-summary** | Generate milestone summary report |
+| **gsd-progress** | Show current project progress and status |
+| **gsd-health** | Diagnose project health and detect anomalies |
+| **gsd-stats** | Display project statistics: phases, plans, requirements, git metrics |
+
+### Code Quality
+
+| Skill | Description |
+|-------|-------------|
+| **gsd-code-review** | Cross-AI code review with structured feedback |
+| **gsd-debug** | Systematic debugging using scientific method with persistent state |
+| **gsd-forensics** | Post-mortem investigation of failed GSD workflow executions |
+| **gsd-audit-milestone** | Audit milestone completeness and quality |
+| **gsd-audit-uat** | Cross-phase audit of all pending UAT and verification items |
+| **gsd-audit-fix** | Fix issues found during audits |
+
+### Quick Actions
+
+| Skill | Description |
+|-------|-------------|
+| **gsd-fast** | Inline execution of simple tasks — no sub-agents, no planning overhead |
+| **gsd-quick** | Quick execution with minimal planning for small-to-medium tasks |
+| **gsd-capture** | Capture ideas, tasks, notes, and seeds to their target locations |
+| **gsd-help** | Display complete GSD command reference |
+
+### Specialized Phases
+
+| Skill | Description |
+|-------|-------------|
+| **gsd-ui-phase** | UI-focused phase: design, prototype, implement, and review user interfaces |
+| **gsd-ai-integration-phase** | AI integration phase: plan and implement AI/ML features |
+| **gsd-secure-phase** | Security phase: audit and harden application security |
+| **gsd-mvp-phase** | MVP phase: build minimum viable product with vertical slices |
+| **gsd-spec-phase** | Specification phase: create detailed technical specifications |
+| **gsd-validate-phase** | Validation phase: automated testing and validation |
+
+### Knowledge & Configuration
+
+| Skill | Description |
+|-------|-------------|
+| **gsd-map-codebase** | Analyze codebase with parallel mapping agents, generate structured documentation |
+| **gsd-graphify** | Build, query, and inspect project knowledge graphs |
+| **gsd-extract-learnings** | Extract decisions, lessons, patterns from completed phase artifacts |
+| **gsd-ingest-docs** | Ingest external documents (PRD, ADR) into GSD planning context |
+| **gsd-config** | Configure GSD settings: workflow toggles, advanced knobs, integrations |
+| **gsd-settings** | Interactive GSD settings configuration |
+
+### Workflow Control
+
+| Skill | Description |
+|-------|-------------|
+| **gsd-pause-work** | Pause current work session with state preservation |
+| **gsd-resume-work** | Resume a paused work session |
+| **gsd-undo** | Safe git rollback of GSD phase or plan commits with dependency checking |
+| **gsd-pr-branch** | Create and manage PR branches for GSD phases |
+| **gsd-cleanup** | Clean up completed GSD artifacts and temporary files |
+| **gsd-update** | Update GSD to the latest version |
+
+### Additional Tools
+
+| Skill | Description |
+|-------|-------------|
+| **gsd-explore** | Explore project structure and understand codebase |
+| **gsd-sketch** | Explore UI/design ideas with disposable HTML prototypes |
+| **gsd-spike** | Time-boxed technical investigation for risk reduction |
+| **gsd-review** | Cross-AI review of project deliverables |
+| **gsd-review-backlog** | Review and prioritize the project backlog |
+| **gsd-add-tests** | Add tests to the project |
+| **gsd-docs-update** | Update project documentation |
+| **gsd-eval-review** | Evaluate and review project quality |
+| **gsd-plan-review-convergence** | Converge plan reviews from multiple AI perspectives |
+| **gsd-ultraplan-phase** | Ultra-detailed planning with maximum context |
+| **gsd-thread** | Manage conversation threads across GSD sessions |
+| **gsd-workspace** | Workspace management and environment setup |
+| **gsd-workstreams** | Manage parallel workstreams within a project |
+| **gsd-inbox** | Manage incoming tasks and requests |
+| **gsd-import** | Import external project data into GSD |
+| **gsd-profile-user** | Configure user profile and preferences |
+| **gsd-phase** | Generic phase operations |
+| **gsd-ns-context** | Namespace context management |
+| **gsd-ns-ideate** | Namespace ideation and brainstorming |
+| **gsd-ns-manage** | Namespace management operations |
+| **gsd-ns-project** | Namespace project operations |
+| **gsd-ns-review** | Namespace review operations |
+| **gsd-ns-workflow** | Namespace workflow operations |
+
 ---
 
 ## How to Use
@@ -113,46 +214,32 @@ Sourced from the superpowers plugin, providing development workflow and collabor
 
 > **Note**: Each zip file contains a root-level `SKILL.md` file, conforming to the official TRAE skill format specification.
 
-## SOLO Mode Adaptation
-
-All skills have been deeply adapted for TRAE SOLO mode:
-
-### Relationship with SOLO Coder Built-in Features
-
-| SOLO Built-in Feature | Corresponding Skill | Relationship |
-|----------------------|---------------------|--------------|
-| Plan mode (/Plan) | omc-plan, ralplan, blueprint | These skills provide deeper consensus planning, usable as enhanced alternatives to Plan mode |
-| Spec mode (/Spec) | deep-interview | Provides stricter ambiguity-gated requirements collection, usable as a pre-enhancement to Spec mode |
-| Multi-task Management | ultrawork, dispatching-parallel-agents | Provides sub-agent parallel execution, works with SOLO's multi-task panel |
-| SOLO Coder Sub-agents | autopilot, ralph, sciomc | Requires configuring corresponding custom agents for SOLO Coder |
-
-### Auto-Run Security Recommendations
-
-Some skills run terminal commands during execution. We recommend in TRAE Settings > Conversation Flow > Auto-Run:
-- Enable "Auto-Run MCP"
-- Use whitelist mode for "Auto-Run Commands" with these safe command prefixes:
-  - `npm test`
-  - `npm run`
-  - `git `
-  - `python -m pytest`
-  - `npx `
-
 ## Credits
 
 - [superpowers](https://github.com/obra/superpowers) — Claude Code plugin
 - [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) — Claude Code plugin
+- [get-shit-done](https://github.com/gsd-build/get-shit-done) — Claude Code plugin
 
 ## Changelog
 
-### v2.0 - Deep SOLO Mode Adaptation
+### v3.0 — GSD Skills Port (66 New Skills)
 
-- All 48 skills adapted for TRAE SOLO mode
-- Paths unified to `.trae/` directory
-- Language unified to Chinese (descriptions and core instructions)
-- Each skill includes SOLO mode adaptation notes
-- Each skill includes "Not Applicable Scenarios", "Output Specification", "Dependencies"
-- `using-superpowers` rewritten for TRAE SOLO
-- All core functionality verified as lossless
+- Added 66 skills from the [get-shit-done](https://github.com/gsd-build/get-shit-done) (GSD) plugin
+- Complete project management workflow: discuss → plan → execute → verify → ship
+- Path adaptation: `.planning/` → `.trae/gsd/planning/`
+- Tool adaptation: `gsd-sdk`/`gsd-tools` CLI references annotated with TRAE alternatives
+- Language unification: All descriptions and core instructions in Chinese
+- SOLO mode adaptation: Each skill includes relationship notes with SOLO Coder Plan/Spec modes
+- All 66 zip packages verified through format compliance checks
+
+### v2.0 — Deep SOLO Mode Adaptation
+
+- Path adaptation: Unified `.omc/`, `.claude/` paths to `.trae/`
+- Tool adaptation: Replaced Claude Code-specific tool references with TRAE SOLO-compatible alternatives
+- Language unification: All skill descriptions and core instructions in Chinese
+- SOLO mode adaptation: Each skill includes relationship notes with SOLO Coder's Plan/Spec modes
+- Spec compliance: Added "Not Applicable Scenarios", "Output Specification", and "Dependencies" sections
+- Lossless functionality: All core instructions, data structures, parameter thresholds, and code examples are fully preserved
 
 ## License
 
