@@ -2,9 +2,9 @@
 
 [中文说明 / Chinese Documentation](./README_CN.md)
 
-A collection of skills adapted for TRAE_CN SOLO, sourced from well-known Claude Code plugins (**superpowers**, **oh-my-claudecode**, **get-shit-done**) and custom-assembled pipelines.
+A collection of skills adapted for TRAE_CN SOLO, sourced from well-known Claude Code plugins (**superpowers**, **oh-my-claudecode**, **get-shit-done**, **gstack**) and custom-assembled pipelines.
 
-TRAE_CN is a free vibe coding application that provides powerful models for free and supports Rules & Skills. However, TRAE_CN does not provide users with general, powerful skills to fully leverage model capabilities and lower the usage barrier. Therefore, I selected the most useful skills from well-known Claude Code plugins (superpowers, oh-my-claudecode, get-shit-done), adapted them for TRAE_CN SOLO, and also assembled a custom AI pipeline skill set. You can download and import them yourself.
+TRAE_CN is a free vibe coding application that provides powerful models for free and supports Rules & Skills. However, TRAE_CN does not provide users with general, powerful skills to fully leverage model capabilities and lower the usage barrier. Therefore, I selected the most useful skills from well-known Claude Code plugins (superpowers, oh-my-claudecode, get-shit-done, gstack), adapted them for TRAE_CN SOLO, and also assembled a custom AI pipeline skill set. You can download and import them yourself.
 
 ---
 
@@ -14,6 +14,7 @@ TRAE_CN is a free vibe coding application that provides powerful models for free
 ├── ai-pipeline（一个使用Ralph保持运行的持续开发循环）/
 ├── frontend（前端及幻灯片）/
 ├── GSD技能移植/
+├── gstack技能移植/
 ├── oh-my-claudecode技能移植/
 └── superpowers技能移植/
 ```
@@ -203,6 +204,107 @@ Sourced from the [get-shit-done](https://github.com/gsd-build/get-shit-done) plu
 | **gsd-ns-review** | Namespace review operations |
 | **gsd-ns-workflow** | Namespace workflow operations |
 
+## gstack Skills Port
+
+Sourced from the [gstack](https://github.com/garrytan/gstack) plugin by Garry Tan, providing a comprehensive engineering workflow from planning through deployment. gstack implements a structured ship cycle with canary monitoring, multi-perspective plan reviews, and design consultation — built for teams that ship fast with confidence.
+
+### Core Workflow
+
+| Skill | Description |
+|-------|-------------|
+| **gstack** | Root router skill: session initialization, skill routing, completion protocol, and self-improvement |
+| **browse** | Web browsing: search and fetch web content for research and context gathering |
+| **ship** | Ship workflow: 16-step release process from branch creation through deployment verification |
+| **investigate** | Systematic debugging: 5-stage investigation workflow with "no root cause, no fix" principle |
+| **qa** | QA testing: 10-stage quality assurance workflow with health scoring rules |
+| **qa-only** | QA-only mode: run quality checks without full ship workflow |
+| **canary** | Canary monitoring: post-deployment canary watch with automated rollback triggers |
+| **careful** | Careful mode: enhanced review and validation for high-stakes changes |
+| **review** | Pre-land PR review: Review Army expert dispatch for multi-perspective code review |
+| **land-and-deploy** | Land and deploy: merge verification and deployment confirmation |
+| **health** | Health dashboard: 6-dimension code quality assessment |
+
+### Planning & Review
+
+| Skill | Description |
+|-------|-------------|
+| **autoplan** | Auto-planning: generates structured plans with dependency analysis and parallel step detection |
+| **plan-ceo-review** | CEO/Founder mode plan review: 4 review modes (Founder/VC/Operator/All) |
+| **plan-eng-review** | Engineering plan review: technical feasibility, architecture, and implementation assessment |
+| **plan-design-review** | Design plan review: UX, visual hierarchy, and interaction quality assessment |
+| **plan-devex-review** | Developer experience review: DX real-time audit for tooling and workflow quality |
+| **plan-tune** | Plan tuning: iterative plan refinement based on review feedback |
+
+### Design
+
+| Skill | Description |
+|-------|-------------|
+| **design-consultation** | Design consultation: expert design feedback and recommendations |
+| **design-html** | HTML design: Pretext text layout engine for production-grade HTML generation |
+| **design-review** | Design review: visual and interaction quality assessment |
+| **design-shotgun** | Design shotgun: rapid multi-variant design exploration |
+
+### Office & Retrospective
+
+| Skill | Description |
+|-------|-------------|
+| **office-hours** | Office hours: structured Q&A and decision-making sessions |
+| **retro** | Weekly engineering retrospective with global retro and comparison modes |
+| **devex-review** | DX review: real-time developer experience audit |
+
+### Security & Documentation
+
+| Skill | Description |
+|-------|-------------|
+| **cso** | Chief Security Officer: comprehensive security review and compliance check |
+| **document-generate** | Document generation: Diataxis framework documentation creation |
+| **document-release** | Document release: post-ship documentation updates |
+| **learn** | Project learning: capture and manage project knowledge |
+| **scrape** | Web scraping: extract data from web pages |
+
+### Context & Safety
+
+| Skill | Description |
+|-------|-------------|
+| **context-save** | Context save: preserve session context for later restoration |
+| **context-restore** | Context restore: resume from saved session context |
+| **freeze** | Freeze: restrict editing scope to prevent unintended changes |
+| **unfreeze** | Unfreeze: release editing restrictions |
+| **guard** | Guard mode: full safety mode with comprehensive protection rules |
+
+### Benchmarking
+
+| Skill | Description |
+|-------|-------------|
+| **benchmark** | Benchmark: web performance regression detection |
+| **benchmark-models** | Benchmark models: model performance comparison and evaluation |
+
+### Setup & Utilities
+
+| Skill | Description |
+|-------|-------------|
+| **gstack-codex** | OpenAI Codex CLI wrapper for alternative model access |
+| **gstack-gstack-upgrade** | gstack upgrade: update to latest gstack version |
+| **gstack-hackernews-frontpage** | Hacker News frontpage: fetch and analyze HN stories |
+| **gstack-landing-report** | Landing report: version queue status and release tracking |
+| **gstack-make-pdf** | Make PDF: convert Markdown to PDF |
+| **gstack-open-gstack-browser** | Open gstack browser: launch browser for web interaction |
+| **gstack-pair-agent** | Pair agent: remote agent pairing for collaborative work |
+| **gstack-setup-browser-cookies** | Setup browser cookies: configure browser authentication |
+| **gstack-setup-deploy** | Setup deploy: configure deployment settings |
+| **gstack-setup-gbrain** | Setup gbrain: configure knowledge base integration |
+| **gstack-skillify** | Skillify: browser skill coding and creation |
+| **gstack-sync-gbrain** | Sync gbrain: synchronize knowledge base data |
+
+### OpenClaw
+
+| Skill | Description |
+|-------|-------------|
+| **gstack-openclaw-ceo-review** | OpenClaw CEO review: founder-perspective plan review |
+| **gstack-openclaw-investigate** | OpenClaw investigate: systematic issue investigation |
+| **gstack-openclaw-office-hours** | OpenClaw office hours: structured Q&A sessions |
+| **gstack-openclaw-retro** | OpenClaw retro: engineering retrospective |
+
 ---
 
 ## How to Use
@@ -219,8 +321,24 @@ Sourced from the [get-shit-done](https://github.com/gsd-build/get-shit-done) plu
 - [superpowers](https://github.com/obra/superpowers) — Claude Code plugin
 - [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) — Claude Code plugin
 - [get-shit-done](https://github.com/gsd-build/get-shit-done) — Claude Code plugin
+- [gstack](https://github.com/garrytan/gstack) — Claude Code plugin by Garry Tan
 
 ## Changelog
+
+### v4.0 — gstack Skills Port (52 New Skills)
+
+- Added 52 skills from the [gstack](https://github.com/garrytan/gstack) plugin by Garry Tan
+- Comprehensive engineering workflow: plan → review → ship → canary → retro
+- Path adaptation: `~/.gstack/` → `.trae/gstack/data/`, `~/.claude/skills/` → `.trae/`
+- Tool adaptation: CLI tool references (gstack CLI, browser tools, Codex CLI) annotated with TRAE alternatives
+- Preamble scripts → text instructions (TRAE cannot run bash preamble scripts)
+- Hooks (PreToolUse) → instruction-based check steps
+- AskUserQuestion format → direct user questioning
+- Shared preamble sections (700+ lines per skill) streamlined, keeping only core logic
+- `$B`/`$D` variable references replaced with descriptive text
+- `CLAUDE.md` references → `.trae/rules/`
+- YAML frontmatter format unified across all 52 skills
+- All 52 zip packages verified through format compliance checks
 
 ### v3.0 — GSD Skills Port (66 New Skills)
 
