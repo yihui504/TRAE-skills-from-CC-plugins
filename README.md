@@ -37,13 +37,13 @@ A custom-assembled automated engineering pipeline from idea to production-grade 
 
 ## frontend (Frontend & Slides)
 
-Frontend development skills covering design, patterns, and presentation creation.
+Frontend development skills covering design, patterns, and presentation creation. **v4.1 Update: All three skills now include a mandatory "Phase 0: Style Discovery & Confirmation" workflow powered by [Refero Styles](https://styles.refero.design/). Before starting any implementation, the LLM will browse Refero's curated style library, extract design tokens (colors, typography, spacing, components), generate visual previews for user comparison, and only begin work after the user confirms their preferred style direction.**
 
 | Skill | Description |
 |-------|-------------|
-| **frontend-design** | Frontend design: creates distinctive, production-grade interfaces with strong visual direction, avoiding generic AI-looking UI |
-| **frontend-patterns** | Frontend patterns: React/Next.js component patterns, state management, performance optimization, form handling, animation, and accessibility best practices |
-| **frontend-slides** | Frontend slides: creates zero-dependency, animation-rich HTML presentations with PPT conversion, visual style exploration, and viewport-safe layouts |
+| **frontend-design** | Frontend design: creates distinctive, production-grade interfaces with strong visual direction. **New: Mandatory Refero style discovery → preview generation → user selection → style lock before implementation** |
+| **frontend-patterns** | Frontend patterns: React/Next.js component patterns, state management, performance optimization. **New: Visual style discovery when work involves UI rendering; Refero token-to-component mapping with role preservation rules** |
+| **frontend-slides** | Frontend slides: creates zero-dependency HTML presentations. **New: Dual-source style discovery (Refero first + built-in presets fallback); mixed strategy supported** |
 
 ## oh-my-claudecode Skills Port
 
@@ -289,11 +289,11 @@ Sourced from the [gstack](https://github.com/garrytan/gstack) plugin by Garry Ta
 | **gstack-landing-report** | Landing report: version queue status and release tracking |
 | **gstack-make-pdf** | Make PDF: convert Markdown to PDF |
 | **gstack-open-gstack-browser** | Open gstack browser: launch browser for web interaction |
-| **gstack-pair-agent** | Pair agent: remote agent pairing for collaborative work |
+| **gstack-pair-agent** | Pair agent: remote agent pairing collaboration |
 | **gstack-setup-browser-cookies** | Setup browser cookies: configure browser authentication |
-| **gstack-setup-deploy** | Setup deploy: configure deployment settings |
+| **gstack-setup-deploy** | Setup deploy: configure deployment parameters |
 | **gstack-setup-gbrain** | Setup gbrain: configure knowledge base integration |
-| **gstack-skillify** | Skillify: browser skill coding and creation |
+| **gstack-skillify** | Skillify: browser skill encoding and creation |
 | **gstack-sync-gbrain** | Sync gbrain: synchronize knowledge base data |
 
 ### OpenClaw
@@ -301,8 +301,8 @@ Sourced from the [gstack](https://github.com/garrytan/gstack) plugin by Garry Ta
 | Skill | Description |
 |-------|-------------|
 | **gstack-openclaw-ceo-review** | OpenClaw CEO review: founder-perspective plan review |
-| **gstack-openclaw-investigate** | OpenClaw investigate: systematic issue investigation |
-| **gstack-openclaw-office-hours** | OpenClaw office hours: structured Q&A sessions |
+| **gstack-openclaw-investigate** | OpenClaw investigate: systematic problem investigation |
+| **gstack-openclaw-office-hours** | OpenClaw office hours: structured Q&A |
 | **gstack-openclaw-retro** | OpenClaw retro: engineering retrospective |
 
 ---
@@ -321,23 +321,28 @@ Sourced from the [gstack](https://github.com/garrytan/gstack) plugin by Garry Ta
 - [superpowers](https://github.com/obra/superpowers) — Claude Code plugin
 - [oh-my-claudecode](https://github.com/Yeachan-Heo/oh-my-claudecode) — Claude Code plugin
 - [get-shit-done](https://github.com/gsd-build/get-shit-done) — Claude Code plugin
-- [gstack](https://github.com/garrytan/gstack) — Claude Code plugin by Garry Tan
+- [gstack](https://github.com/garrytan/gstack) — Claude Code plugin (by Garry Tan)
 
 ## Changelog
 
+### v4.1 — Frontend Skills: Refero Style Discovery Integration
+
+- All three frontend skills now include a mandatory **Phase 0: Style Discovery & Confirmation** workflow
+- Powered by [Refero Styles](https://styles.refero.design/) — curated design references extracted from real product pages
+- Workflow: analyze requirements → browse Refero style library → extract design tokens → generate visual previews → user selects → style lock → begin implementation
+- **frontend-design**: Full 6-step Phase 0 with UUID reference table, preview template, style lock format, Refero MCP optional enhancement, and fallback strategy
+- **frontend-patterns**: Style discovery for visual work (skippable for logic-only tasks); new "Implementing Components with Refero Tokens" section with token mapping rules and role preservation
+- **frontend-slides**: Dual-source style discovery (Refero first + built-in STYLE_PRESETS fallback); mixed strategy for combining Refero tokens with preset layouts/animations
+- Style lock mechanism prevents implementation drift from user-confirmed direction
+- Token role preservation rules: CTA colors stay CTA-only, border radii keep their specified elements, etc.
+
 ### v4.0 — gstack Skills Port (52 New Skills)
 
-- Added 52 skills from the [gstack](https://github.com/garrytan/gstack) plugin by Garry Tan
-- Comprehensive engineering workflow: plan → review → ship → canary → retro
-- Path adaptation: `~/.gstack/` → `.trae/gstack/data/`, `~/.claude/skills/` → `.trae/`
-- Tool adaptation: CLI tool references (gstack CLI, browser tools, Codex CLI) annotated with TRAE alternatives
-- Preamble scripts → text instructions (TRAE cannot run bash preamble scripts)
-- Hooks (PreToolUse) → instruction-based check steps
-- AskUserQuestion format → direct user questioning
-- Shared preamble sections (700+ lines per skill) streamlined, keeping only core logic
-- `$B`/`$D` variable references replaced with descriptive text
-- `CLAUDE.md` references → `.trae/rules/`
-- YAML frontmatter format unified across all 52 skills
+- Added 52 skills from the [gstack](https://github.com/garrytan/gstack) plugin (by Garry Tan)
+- Complete engineering workflow: planning → review → ship → canary monitoring
+- Multi-perspective plan reviews: CEO, engineering, design, and DX review modes
+- Design consultation and multi-variant design exploration
+- Security review (CSO), documentation generation, and context management
 - All 52 zip packages verified through format compliance checks
 
 ### v3.0 — GSD Skills Port (66 New Skills)
